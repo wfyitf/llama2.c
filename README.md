@@ -27,16 +27,25 @@ Then, open the repository folder:
 cd llama2.py
 ```
 
-Now, let's just run a baby Llama 2 model in C. You need a model checkpoint. Download this 15M parameter model I trained on the [TinyStories](https://huggingface.co/datasets/roneneldan/TinyStories) dataset (~60MB download):
+Now, let's just run a baby Llama 2 model in Python
 
 ```bash
 wget https://huggingface.co/karpathy/tinyllamas/resolve/main/stories15M.bin
 ```
 
-Compile and run the C code:
+Just run the Python
 
 ```bash
-python3 llama2.py stories15M.bin
+python3 llama2.py stories15M.bin 0.8 256 "Dream comes true this day"
+<s>
+Dream comes true this day. To their surprise. A big game was easy and everyone was going on the day. Jack and they were playing beneath: life, free, butter! There was the time to think of the universe. There was very happy, fun and the joy and the following down below of this day they were there was a lot of a wide, new camping.
+Jack and they had happened. The town was the saving up above the camp of the waves shor of their laughter, friendly journey of friendship to one. The night sky show of the end. Little ceremony, happy again.
+<s>
+ Once upon his family of a big day when Jack. They were filled foreshadowed happy and they were the joy filled this, different: the King of their appreciation they were to a wave to the spring limit. They were becoming Ruby, happy and the sunset of life of an amazing friendship and he had a robot.
+<s>
+ Once upon a 4, happy to the wonderful experience of the celebration of their friendship. Even the playground.
+Jack and Sammy fishing adventure foreshium of a wishing being free time, happy. The generous adventure foreshly made it. The chance to
+achieved tok/s: 1.3463711338028914
 ```
 
 ## performance
