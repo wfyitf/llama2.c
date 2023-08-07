@@ -5,9 +5,9 @@
 
 I think it's worthwhile to have a fork that implements Python version of `llama2.c` as a kind of simplest "reference implementation" for further educational purpose for wide audience.
 
-Currently `llam2.c` contains 2`.py` files for training models and and 1 `.c` file for inference. There is a gap to have a simple reference implementation of all transformers logic in a simple Python file under 500 lines. While original FB/llama code also implemented in Python, I couldn't say that implementation is simple due to multiple dependencies and optimizations impelemnted.
+Currently `llam2.c` contains 2`.py` files for training models and 1 `.c` file for inference. There is a gap to have a simple reference implementation of all transformers logic in a simple Python file under 500 lines. While original FB/llama code also implemented in Python, I couldn't say that implementation is simple due to multiple dependencies and optimizations impelemnted.
 
-PS. Performance is awful at the moment `~1 tok./sec`, there is a huge room for improvements. PRs are welcome 😄
+PS. Performance is awful at the moment `~1 tok./sec`, there is a huge room for improvements
 
 
 ## feel the magic
