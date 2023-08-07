@@ -1,14 +1,15 @@
 ## llama2.py
 
 
-## Why this fork?
+## why this fork?
 
-I think it's worthwhile to have a fork that implements Python version of `llama2.c` as a kind of simplest "reference implementation" for further educational purpose for wide audience.
+This repository serves as a fork that provides a Python-based implementation of `llama2.c`. Designed for an extensive audience, it aims to be a straightforward "reference implementation" suitable for educational purposes.
 
-Currently `llam2.c` contains 2`.py` files for training models and 1 `.c` file for inference. There is a gap to have a simple reference implementation of all transformers logic in a simple Python file under 500 lines. While original FB/llama code also implemented in Python, I couldn't say that implementation is simple due to multiple dependencies and optimizations impelemnted.
+The current `llama2.c` repository comprises two Python files intended for model training and one C file for inference. Our goal is to bridge the existing gap by offering a clear-cut reference implementation encapsulating all transformer logic within a concise Python file, not exceeding 500 lines of code.
 
-PS. Performance is awful at the moment `~1 tok./sec`, there is a huge room for improvements
+Though the original Facebook/llama is written on Python, its complexity is rather high due to multiple dependencies and sophisticated optimizations implemented within. This often makes it hard to follow, particularly for those new to the field.
 
+Please note, the current performance of our implementation is relatively slow, clocking in at approximately `~1 tok/sec`. This leaves ample scope for significant performance optimizations. We welcome any contributions towards enhancing the efficiency of this project.
 
 ## feel the magic
 
