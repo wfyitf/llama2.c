@@ -395,10 +395,7 @@ if __name__ == "__main__":
 
     # Read in the model.bin file
     weights = TransformerWeights()
-    fd = 0  # file descriptor for memory mapping
-    data = None  # memory mapped data pointer
     file_size = 0  # size of the checkpoint file in bytes
-    weights_ptr = 0
 
     with open(checkpoint, "rb") as file:
         if not file:
@@ -410,7 +407,6 @@ if __name__ == "__main__":
         dim, hidden_dim, n_layers, n_heads, n_kv_heads, vocab_size, seq_len = struct.unpack('7i', _config)
         # Creating a Config object
         config = Config(dim, hidden_dim, n_layers, n_heads, n_kv_heads, vocab_size, seq_len)
-        # weights_ptr = file.tell()
 
         # negative vocab size is hacky way of signaling unshared weights. bit yikes.
         shared_weights = 1 if config.vocab_size > 0 else 0
