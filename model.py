@@ -2,7 +2,7 @@ import math
 import struct
 import inspect
 from dataclasses import dataclass
-from typing import Any, Optional, Tuple
+from typing import Optional, Tuple
 
 import numpy as np
 import torch

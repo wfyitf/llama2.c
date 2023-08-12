@@ -2,10 +2,8 @@
 Sample from the trained model with PyTorch
 """
 import os
-import pickle
 from contextlib import nullcontext
 import torch
-import tiktoken
 from model import ModelArgs, Transformer
 from tokenizer import Tokenizer
 
