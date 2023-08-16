@@ -367,28 +367,11 @@ def init_run_state(state, config):
     state.value_cache = [0] * (config.n_layers * config.seq_len * config.dim)
 
 
-if __name__ == "__main__":
-    checkpoint = None
-    temperature = 0.0
-    steps = 256
-    prompt = None
-
-    if len(sys.argv) < 2:
-        print(
-            "Usage: python script.py <checkpoint_file> [temperature] [steps] [prompt]")
-        sys.exit(1)
-
-    if len(sys.argv) >= 2:
-        checkpoint = sys.argv[1]
-
-    if len(sys.argv) >= 3:
-        temperature = float(sys.argv[2])
-
-    if len(sys.argv) >= 4:
-        steps = int(sys.argv[3])
-
-    if len(sys.argv) >= 5:
-        prompt = sys.argv[4]
+def run(args):
+    checkpoint = args["checkpoint"]
+    temperature = args["temperature"]
+    steps = args["steps"]
+    prompt = args["prompt"]
 
     rng_seed = int(time.time())
     random.seed(rng_seed)
@@ -485,3 +468,30 @@ if __name__ == "__main__":
     # Report achieved tok/s
     end = time_in_ms()
     print(f"\nachieved tok/s: {(steps - 1) / (end - start) * 1000}")
+
+
+if __name__ == "__main__":
+    args = {
+        "checkpoint": None,
+        "temperature": 0.0,
+        "steps": 256,
+        "prompt": None
+    }
+    if len(sys.argv) < 2:
+        print(
+            "Usage: python script.py <checkpoint_file> [temperature] [steps] [prompt]")
+        sys.exit(1)
+
+    if len(sys.argv) >= 2:
+        args["checkpoint"] = sys.argv[1]
+
+    if len(sys.argv) >= 3:
+        args["temperature"] = float(sys.argv[2])
+
+    if len(sys.argv) >= 4:
+        args["steps"] = int(sys.argv[3])
+
+    if len(sys.argv) >= 5:
+        args["prompt"] = sys.argv[4]
+
+    run(args)
