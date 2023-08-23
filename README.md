@@ -46,6 +46,19 @@ Jack and Sammy fishing adventure foreshium of a wishing being free time, happy. 
 achieved tok/s: 1.3463711338028914
 ```
 
+## use as a package
+[PyPi llama2-py](https://pypi.org/project/llama2-py/)
+```bash
+pip install llama2-py
+```
+
+```python
+>>> import llama2
+>>> llama2.run({"checkpoint": "out/model.bin", "temperature": 0.0, "steps": 256, "prompt": None})
+<s>
+Once upon a time, there was...
+```
+
 ## performance
 
 Performance is awful at the moment. 
