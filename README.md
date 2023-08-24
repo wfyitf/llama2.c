@@ -1,5 +1,6 @@
 ## llama2.py
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tairov/llama2.py/blob/master/llama2.ipynb)
 
 ## why this fork?
 
