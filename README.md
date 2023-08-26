@@ -2,6 +2,13 @@
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/tairov/llama2.py/blob/master/llama2.ipynb)
 
+## demo
+
+<p align="center">
+  <img src="assets/llama2.py-demo.gif" width="720" alt="Demo Llama2.py">
+</p>
+
+
 ## why this fork?
 
 This repository serves as a fork that provides a Python-based implementation of `llama2.c`. Designed for an extensive audience, it aims to be a straightforward "reference implementation" suitable for educational purposes.
