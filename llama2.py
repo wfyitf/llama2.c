@@ -188,6 +188,10 @@ def transformer(token: int, pos: int, conf: Config, state: RunState, weights: Tr
                 k[i] = k0 * fcr - k1 * fci
                 k[i + 1] = k0 * fci + k1 * fcr
 
+            # reassigned back to state.q and state.k
+            state.q[h * head_size: (h + 1) * head_size] = q
+            state.k[h * head_size: (h + 1) * head_size] = k
+
         # Save key,value at this time step (pos) to our kv cache
         loff = l * conf.seq_len * dim  # kv cache layer offset for convenience
         state.key_cache[loff + pos * dim: loff + (pos + 1) * dim] = state.k
