@@ -6,4 +6,4 @@ build/
 dist/
 llama2_py.egg-info/
 
-*.bin
+stories*.bin
